@@ -2,6 +2,15 @@ import React, { Component} from 'react';
 
 class AddPlayerForm extends Component {
 
+  static PropTypes = {
+    changeScore: PropTypes.func.isRequired,
+    removePlayer: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+    score: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    index: PropTypes.number.isRequired
+  };
+
   playerInput = React.createRef();
 
   handleSubmit = (e) => {

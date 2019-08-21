@@ -1,7 +1,18 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import Counter from './Counter';
   
 class Player extends PureComponent {
+
+  static PropTypes = {
+    changeScore: PropTypes.func.isRequired,
+    removePlayer: PropTypes.func.isRequired,
+    name: PropTypes.string.isRequired,
+    score: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
+    index: PropTypes.number.isRequired
+  };
+
   render() {
     const {
       name,
